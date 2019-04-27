@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>focus.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+   <!--  <label for="txt">name</label> -->
+    name:<input id="a" type="text"/> <!-- ID不能取名为关键字 -->
+    <span id="action"></span>
+  </body>
+  
+  
+  <script type="text/javascript">
+  	var a = document.getElementById("a");
+  	a.onfocus = function(){
+  		var span = document.getElementById("action");
+  		span.innerHTML = "小心";
+  		span.style.color = "yellow";
+  	};
+  	
+  	a.onblur = function(){
+  		var span = document.getElementById("action");
+  		span.innerHTML = "error";
+  		span.style.color = "red";
+  	}
+  	
+  </script>
+  
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>time.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+    	注册成功，<span id="second" style="color: red">5</span>秒之后即将跳转首页，若取消跳转，则<a href="http://www.baidu.com">点击此处</a>
+  </body>
+  
+  <script type="text/javascript">
+  	
+  	var time=5;
+  	setInterval(
+  		function(){
+  			var second = document.getElementById("second");
+  			if(time>=1){
+  				second.innerHTML = time;
+  				time--;
+  			}else{
+  				location.href="http://www.baidu.com";
+  			}
+  			
+  		},
+  		1000
+  	);
+  	
+  </script>
+  
+</html>

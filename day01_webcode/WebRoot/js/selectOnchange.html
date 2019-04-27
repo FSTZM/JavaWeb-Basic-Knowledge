@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>selectOnchange.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+    <select id="city">
+    	<option value="xa">西安</option>
+    	<option value="xz">忻州</option>
+    	<option value="ty">太原</option>
+    </select>
+    <select id="area">
+    	<option>雁塔</option>
+    	<option>碑林</option>
+    	<option>未央</option>
+    </select>
+  </body>
+  
+  <script type="text/javascript">
+  
+  	var select = document.getElementById("city");
+  	select.onchange = function(){
+  		
+  		switch(select.value){
+  			case 'xa':
+  				var area = document.getElementById("area");
+  				area.innerHTML = "<option>雁塔</option><option>碑林</option><option>未央</option>";
+  				break;
+  			case'xz':
+  				var area = document.getElementById("area");
+  				area.innerHTML = "<option>忻府区</option><option>代县</option><option>繁峙</option>";
+  				break;
+  			case'ty':
+  				var area = document.getElementById("area");
+  				area.innerHTML = "<option>尖草坪</option><option>杏花岭</option><option>万柏林</option>"
+  				break;
+  			default:
+  				alert("error!");
+  		}
+  	};
+  		
+  		
+  
+  </script>
+  
+  
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mymouse.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    
+    <style type="text/css">
+    	#d{
+    		width:300px;
+    		height:180px;
+    		background-color: pink;
+    	}
+    </style>
+
+  </head>
+  
+  <body>
+    <div id="d"></div>
+  </body>
+  
+  <script type="text/javascript">
+  	var div = document.getElementById("d");
+  	div.onmouseover = function(){
+  		this.style.backgroundColor = "red";
+  	}
+  	div.onmouseout = function(){
+  		this.style.backgroundColor = "green";
+  	}
+  	
+  </script>
+  
+</html>
