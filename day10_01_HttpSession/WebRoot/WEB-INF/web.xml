@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <servlet>
+    <servlet-name>demo1</servlet-name>
+    <servlet-class>session.demo1</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>demo2</servlet-name>
+    <servlet-class>session.demo2</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowAllBooksServlet</servlet-name>
+    <servlet-class>cart.ShowAllBooksServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddCart</servlet-name>
+    <servlet-class>cart.AddCart</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowCart</servlet-name>
+    <servlet-class>cart.ShowCart</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CodeServlet</servlet-name>
+    <servlet-class>session.CodeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Doligin</servlet-name>
+    <servlet-class>session.Doligin</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>demo1</servlet-name>
+    <url-pattern>/servlet/demo1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>demo2</servlet-name>
+    <url-pattern>/servlet/demo2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowAllBooksServlet</servlet-name>
+    <url-pattern>/servlet/ShowAllBooksServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddCart</servlet-name>
+    <url-pattern>/servlet/AddCart</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowCart</servlet-name>
+    <url-pattern>/servlet/ShowCart</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CodeServlet</servlet-name>
+    <url-pattern>/servlet/CodeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Doligin</servlet-name>
+    <url-pattern>/servlet/Doligin</url-pattern>
+  </servlet-mapping>
+
+</web-app>

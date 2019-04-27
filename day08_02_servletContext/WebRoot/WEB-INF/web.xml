@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>day08_02_servletContext</display-name>
+  <servlet>
+    <servlet-name>ServletContextDemo1</servlet-name>
+    <servlet-class>servletContext.ServletContextDemo1</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ServletContextDemo2</servlet-name>
+    <servlet-class>servletContext.ServletContextDemo2</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ServletContextDemo3</servlet-name>
+    <servlet-class>servletContext.ServletContextDemo3</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ServletContextDemo4</servlet-name>
+    <servlet-class>servletContext.ServletContextDemo4</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ServletContextDemo5</servlet-name>
+    <servlet-class>servletContext.ServletContextDemo5</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ServletContextDemo6</servlet-name>
+    <servlet-class>servletContext.ServletContextDemo6</servlet-class>
+  </servlet>
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>ServletContextDemo1</servlet-name>
+    <url-pattern>/servlet/demo1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServletContextDemo2</servlet-name>
+    <url-pattern>/servlet/demo2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServletContextDemo3</servlet-name>
+    <url-pattern>/servlet/demo3</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServletContextDemo4</servlet-name>
+    <url-pattern>/servlet/demo4</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServletContextDemo5</servlet-name>
+    <url-pattern>/servlet/demo5</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServletContextDemo6</servlet-name>
+    <url-pattern>/servlet/demo6</url-pattern>
+  </servlet-mapping>
+  
+  <context-param>
+  	<param-name>encoding</param-name>
+  	<param-value>UTF-8</param-value>
+  </context-param>
+  
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

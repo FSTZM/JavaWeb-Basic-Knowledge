@@ -1,0 +1,6 @@
+	
+	/**
+	 * Statement 和 PreparedStatement之间的关系和区别.
+	 *    关系：PreparedStatement继承自Statement,都是接口
+	 *	    区别：PreparedStatement可以使用占位符，是预编译的，批处理比Statement效率高
+	 */

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <servlet>
+    <servlet-name>demo1</servlet-name>
+    <servlet-class>cookieDemo.demo1</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>demo2</servlet-name>
+    <servlet-class>cookieDemo.demo2</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>clear</servlet-name>
+    <servlet-class>cookieDemo.clear</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>login</servlet-name>
+    <servlet-class>loginServlet.login</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>doLogin</servlet-name>
+    <servlet-class>loginServlet.doLogin</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowAllBookServlet</servlet-name>
+    <servlet-class>history.ShowAllBookServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowBookDetail</servlet-name>
+    <servlet-class>history.ShowBookDetail</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>demo1</servlet-name>
+    <url-pattern>/servlet/demo1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>demo2</servlet-name>
+    <url-pattern>/servlet/demo2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>clear</servlet-name>
+    <url-pattern>/servlet/clear</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>login</servlet-name>
+    <url-pattern>/servlet/login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>doLogin</servlet-name>
+    <url-pattern>/servlet/doLogin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowAllBookServlet</servlet-name>
+    <url-pattern>/servlet/ShowAllBookServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowBookDetail</servlet-name>
+    <url-pattern>/servlet/ShowBookDetail</url-pattern>
+  </servlet-mapping>
+
+</web-app>
