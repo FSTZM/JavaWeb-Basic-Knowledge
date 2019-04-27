@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1550904919711_1" label="javaweb" name="javaweb">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day07_DOM4J" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day14_00_dbutils" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day17_00_autoLogin" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day14_01_transfer3" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day14_02_bookManager" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day08_02_servletContext" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day08_00_servlet" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day10_00_cookie" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day09_01_HttpServletRequest" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day14_01_transfer2" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day08_01_servletConfig" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day02_bookstore" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day10_01_HttpSession" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day13_pool" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day06_LOGIN" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day14_01_transfer1" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day19_product" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day09_00_HttpServletResponse" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day06_Junit" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day01_webcode" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day11_00_jsp" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day06_CRUD" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day07_myApp" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day06_JDBC" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day12_user" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day18_00_upload" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1550905052229_3" label="ssh" name="ssh">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mybatis_day02" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/spring_day03_tx5" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day26_03_struts2upload" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day27_02_resubmit" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springmvc_day01_02" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Hibernate_day01" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day27_03_struts2resubmit" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mybatis_day01" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day24_04_struts2Captcha" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mybatis_generator" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/spring_day03_tx2" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day24_01_struts2Template" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/spring_day03_tx" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springmvc_day01_01" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day26_01_interceptor" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day28_01_struts2final" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/spring_day03_ssh_new" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day27_01_struts2actionContext" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Hibernate_day04" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/spring_day03_ssh2" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springmvc_day02_ssm" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/spring_day03_tx3" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Hibernate_day03" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/spring_day03_ssh3" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day26_02_struts2interceptor" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/spring_day03_web" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/spring_day03_tx4" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day25_01_struts2regist" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day24_03_struts2Action" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day25_03_struts2validate" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day24_02_struts2HelloAction" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Hibernate_day02" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/spring_day03_ssh4" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day25_02_struts2convert" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1550907089329_6" label="dataStructure" name="dataStructure">
+<item elementID="=DataStructure" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1522222981802_0" label="Window Working Set" name="Aggregate for window 1522222981802"/>
+</workingSetManager>

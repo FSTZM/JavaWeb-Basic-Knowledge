@@ -1,0 +1,19 @@
+配置文件：
+	1.全局配置文件：配置数据源、事务等运行时信息---sqlMapConfig.xml
+	2.映射文件：执行statement的相关信息，包括sql语句、输入参数、输出结果---User.xml
+	注：在全局配置文件中加载映射文件
+	
+创建SQLSessionFactory会话工厂
+
+产生sqlSession会话：它是一个面向程序员的接口，通过该接口对数据增删改查
+	该接口有一个默认的实现方法：DefaultSqlSession
+
+executer执行器
+	作用：SqlSession本身不能直接操作数据库，需要该执行器来操作
+	实现： 1.基本执行器
+		  2.缓存执行器(默认)
+		  
+MappedStatement
+	作用：封装statement信息，包括sql语句、输入参数、输出结果等
+	
+数据库

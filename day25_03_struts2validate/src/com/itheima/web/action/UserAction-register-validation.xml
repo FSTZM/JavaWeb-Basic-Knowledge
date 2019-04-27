@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<!-- 基于字段的声明验证 requiredstring会验证输入的内容的是否为空字符串并且可以去掉表格 -->
+	<field name="username">
+		<field-validator type="requiredstring">
+			<message>用户名未填写</message>
+		</field-validator>
+	</field>
+	
+	<!-- 基于验证器的验证 -->
+	<validator type="requiredstring">
+		<!-- 以注入(一般注入都会调用一个setXXX的方法)的形式提供需要验证的信息 -->
+		<param name="fieldName">passwoord</param>
+		<message>密码必须输入</message>
+	</validator>
+	
+</validators>

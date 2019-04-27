@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.devMode" value="true"></constant>
+	<package name="p1" extends="struts-default">
+		<action name="actionContext" class="com.itheima.web.action.ActionContextDemo" method="actionContext">
+			<result>/demo.jsp</result>
+		</action>
+		<action name="valueStack" class="com.itheima.web.action.ActionContextDemo2" method="valueStack">
+			<result>/demo2.jsp</result>
+		</action>
+		<action name="iteratorDemo" class="com.itheima.web.action.ActionContextDemo3" method="iteratorDemo">
+			<result>/demo3.jsp</result>
+		</action>
+		
+		<action name="action" class="com.itheima.web.action.ActionContextDemo4">
+			<result>/demo5.jsp</result>
+		</action>
+		<action name="saveCustomer" class="com.itheima.web.action.ActionContextDemo4" method="saveCustomer">
+		</action>
+	</package>
+	
+</struts>

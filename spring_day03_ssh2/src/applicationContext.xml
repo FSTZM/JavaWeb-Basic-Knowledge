@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       					   http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+       					   http://www.springframework.org/schema/tx 
+       					   http://www.springframework.org/schema/tx/spring-tx.xsd
+       					   http://www.springframework.org/schema/aop 
+       					   http://www.springframework.org/schema/aop/spring-aop.xsd
+       					   http://www.springframework.org/schema/context 
+       					   http://www.springframework.org/schema/context/spring-context.xsd">
+       					   
+    <!-- spring整合hibernate：没有 hibernate.cfg.xml
+    	1)删除文件，但是要保留文件内容
+    		内容中有基本四项，是对数据源进行配置的，因此spring配置文件中要先
+    	2)修改Dao层，因为dao层用了hibernateTemplate，现在要继承HibernateDaoSupport
+    -->
+    <!-- 1.1 加载properties文件-->
+    <!-- 1.2 配置数据源 -->   
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+    	<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+    	<property name="jdbcUrl" value="jdbc:mysql:///spring_day03"></property>
+    	<property name="user" value="root"></property>
+    	<property name="password" value="123"></property>
+    </bean>	
+	<!-- 1.3 配置LocalSessionFactoryBean 获得SessionFactory
+			1) dataSource数据源
+			2) 配置除去基本四项的其他项
+			3) 导入映射文件
+	 -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.current_session_context_class">thread</prop>
+			</props>
+		</property>
+		<property name="mappingLocations" value="com/itheima/domain/User.hbm.xml"></property>
+	</bean>
+	
+	<!-- 不需要模板 -->
+	
+	<!-- 3 dao -->
+	<bean id="userDao" class="com.itheima.dao.impl.UserDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- 4 service -->
+	<bean id="userService" class="com.itheima.service.impl.UserServiceImpl">
+		<property name="userDao" ref="userDao"></property>
+	</bean>
+	
+	<!-- 5 事务管理 -->
+	<!-- 5.1 事务管理器 ：HibernateTransactionManager -->
+	<bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager" >
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<!-- 5.2 事务详情 ，给ABC进行具体事务设置 -->
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<tx:attributes>
+			<tx:method name="register"/>
+		</tx:attributes>
+	</tx:advice>
+	<!-- 5.3 AOP编程  -->
+	<aop:config>
+		<aop:advisor advice-ref="txAdvice" pointcut="execution(* com.itheima.service..*.*(..))"/>
+	</aop:config>
+	
+
+</beans>

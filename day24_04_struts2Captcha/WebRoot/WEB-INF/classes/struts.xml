@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>	
+	<!-- 全局结果视图 -->
+	<package name="mydefault" abstract="true" extends="struts-default">
+		<result-types>
+			<result-type name="captcha" class="com.itheima.web.result.CAPTCHAResult"></result-type>
+		</result-types>
+		
+		<global-results>
+		<!-- 结果视图的查找顺序：先找当前动作类自己的
+			如果没有，再来全局的结果视图查找   注入思想 -->		
+			<result name="success" type="captcha">
+				<param name="width">180</param>
+				<param name="height">30</param>
+			</result>
+		</global-results>
+		
+	</package>
+
+	<!-- 自定义结果类型的配置 -->
+	<package name="p1" extends="mydefault">
+	
+		<!-- <result-types>
+			<result-type name="captcha" class="com.itheima.web.result.CAPTCHAResult"></result-type>
+		</result-types> -->
+		
+		<action name="captchaAction" class="com.itheima.web.action.CaptchaAction">
+			<!-- 
+			<result name="success" type="captcha">
+				配置图片的大小: 局部结果视图 -->
+				<!-- 在包中配置的结果视图，只能是当前包和其子包中使用
+					 写在action内部的结果视图，只能是当前包和其子包使用
+				
+				<param name="width">180</param>
+				<param name="height">30</param>
+			</result> -->
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><beans xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans                 http://www.springframework.org/schema/beans/spring-beans.xsd                http://www.springframework.org/schema/aop                 http://www.springframework.org/schema/aop/spring-aop.xsd                http://www.springframework.org/schema/context                 http://www.springframework.org/schema/context/spring-context.xsd">
+       					   
+	<!-- 1 datasourse -->
+	<bean class="com.mchange.v2.c3p0.ComboPooledDataSource" id="dataSource">
+		<property name="driverClass" value="com.mysql.jdbc.Driver"/>
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/spring_day03"/>
+		<property name="user" value="root"/>
+		<property name="password" value="123"/>
+	</bean>
+	
+	<!-- 2 dao -->
+	<bean class="com.itheima.dao.impl.AccountDaoImpl" id="accountDao">
+		<!-- dao要引用DataSource中的东西 -->
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	
+	<!-- 3 service -->
+	<bean class="com.itheima.service.impl.AccountServiceImpl" id="accountService">
+		<property name="accountDao" ref="accountDao"/>
+		<property name="transactionTemplate" ref="transactionTemplate"/>
+	</bean>
+	
+	<!-- 4 配置模板 -->
+	<bean class="org.springframework.transaction.support.TransactionTemplate" id="transactionTemplate">
+		<property name="transactionManager" ref="txManager"/>
+	</bean>
+	
+	<!-- 5 配置事务管理器，事务是从connection获得的，连接是从连接池DataSource获得的 -->
+	<bean class="org.springframework.jdbc.datasource.DataSourceTransactionManager" id="txManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	
+	
+
+<import resource="classpath:spring_day03_tx2-dao-context.xml"/><import resource="classpath:spring_day03_tx2-security-context.xml"/><import resource="classpath:spring_day03_tx2-service-context.xml"/></beans>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="p1" location="10,10" size="280,140">
+    <action name="login" location="65,47" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="success.jsp" />
+      </result>
+      <result name="invalid.token">
+        <resourceEdge source="invalid.token" routing="0" target="message.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="success.jsp" path="/success.jsp" location="75,192" size="150,55" />
+  <webResource name="message.jsp" path="/message.jsp" location="363,83" size="150,55" />
+</Struts2Diagram>
+

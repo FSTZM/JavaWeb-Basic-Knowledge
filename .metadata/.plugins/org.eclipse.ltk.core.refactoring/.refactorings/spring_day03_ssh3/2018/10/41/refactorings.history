@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;spring_day03_ssh3/WebRoot/messag.jsp&apos; to &apos;message.jsp&apos;" description="Rename resource &apos;messag.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebRoot/messag.jsp" name="message.jsp" stamp="1539089405268" updateReferences="true"/>
+</session>

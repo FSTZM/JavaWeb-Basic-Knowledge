@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;pool.MyPool&apos; to &apos;MyDataSource&apos;&#x0D;&#x0A;- Original project: &apos;day13_pool&apos;&#x0D;&#x0A;- Original element: &apos;pool.MyPool&apos;&#x0D;&#x0A;- Renamed element: &apos;pool.MyDataSource&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;MyPool&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;pool{MyPool.java[MyPool" matchStrategy="1" name="MyDataSource" qualified="false" references="true" similarDeclarations="false" stamp="1527774269660" textual="false" version="1.0"/>
+</session>

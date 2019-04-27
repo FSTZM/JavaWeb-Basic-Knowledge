@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<!-- Struts 2带有一个可选的动作接口(com.opensymphony.xwork2.Action)
+
+	这个接口是非常简单的，配有5个常用常数值： success, error, none, input and logic。
+	
+	1.SUCCESS：Action正确的执行完成，返回相应的视图，success是name属性的默认值；
+	2.NONE：表示Action正确的执行完成，但并不返回任何视图； 
+	3.ERROR：表示Action执行失败，返回到错误处理视图； 
+	4.INPUT：Action的执行，需要从前端界面获取参数，INPUT就是代表这个参数输入的界面，
+			一般在应用中，会对这些参数进行验证，如果验证没有通过，将自动返回到该视图；
+	5.LOGIN：Action因为用户没有登陆的原因没有正确执行，将返回该登陆视图，要求用户进行登陆验证。
+
+ -->
+	<constant name="struts.devMode" value="true"></constant>
+	<package name="p1" extends="struts-default">
+		<action name="register" class="com.itheima.web.action.UserAction" method="register">
+			<result name="success">/success.jsp</result><!-- 注册成功后转向的结果的视图 -->
+			<result name="exists">/message.jsp</result><!-- 用户名存在后转向的结果的视图 -->
+			<result name="input">/register.jsp</result>
+		</action>
+		
+		<action name="findAll" class="com.itheima.web.action.UserAction" method="findAll">
+			<result name="success">/findAll.jsp</result>
+		</action>
+		
+		<action name="addStudent" class="com.itheima.web.action.StudentAction" method="addStudent">
+			<result name="input">/student.jsp</result>
+		</action>
+		
+	</package>
+	
+</struts>

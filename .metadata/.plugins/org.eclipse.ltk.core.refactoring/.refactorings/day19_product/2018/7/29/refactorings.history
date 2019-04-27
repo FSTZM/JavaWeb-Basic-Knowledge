@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.itheima.product.web.filter.RoleFileter.java&apos; to &apos;RoleFilter.java&apos;&#x0D;&#x0A;- Original project: &apos;day19_product&apos;&#x0D;&#x0A;- Original element: &apos;com.itheima.product.web.filter.RoleFileter.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.itheima.product.web.filter.RoleFilter.java&apos;" description="Rename compilation unit &apos;RoleFileter.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;com.itheima.product.web.filter{RoleFileter.java" name="RoleFilter.java" references="false" stamp="1531811480302" version="1.0"/>
+</session>

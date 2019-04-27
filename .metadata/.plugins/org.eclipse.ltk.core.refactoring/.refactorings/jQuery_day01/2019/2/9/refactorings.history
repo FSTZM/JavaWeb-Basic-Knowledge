@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;6.文档处理案例&apos; to &apos;WebRoot&apos;&#x0D;&#x0A;- Original project: &apos;jQuery_day01&apos;&#x0D;&#x0A;- Destination element: &apos;WebRoot&apos;&#x0D;&#x0A;- Original element: &apos;6.文档处理案例&apos;" description="Copy folder" element1="WebRoot/6.文档处理案例" files="0" flags="589830" folders="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1551151207869" target="/jQuery_day02/WebRoot" units="0" version="1.0"/>
+</session>

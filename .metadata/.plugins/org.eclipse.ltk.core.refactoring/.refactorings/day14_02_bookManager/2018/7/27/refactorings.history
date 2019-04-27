@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;day19_product/src/com.itheima.product.domain&apos;&#x0D;&#x0A;- Original project: &apos;day14_02_bookManager&apos;&#x0D;&#x0A;- Destination element: &apos;day19_product/src/com.itheima.product.domain&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     domain.Book.java&#x0D;&#x0A;     domain.PageBean.java" description="Copy compilation units" destination="=day19_product/src&lt;com.itheima.product.domain" element1="/src&lt;domain{Book.java" element2="/src&lt;domain{PageBean.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1530511186572" units="2" version="1.0"/>
+</session>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 允许OGNL表达式 -->
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>
+	<constant name="struts.devMode" value="true"></constant>
+
+	<!-- 限制上传文件的大小：通过修改struts2的常量。 在default.properties中配的struts.multipart.maxSize=2097152 -->
+	<constant name="struts.multipart.maxSize" value="5242880"></constant>
+
+	<package name="p1" extends="struts-default">
+		<action name="upload1" class="com.itheima.web.action.UploadAction1"
+			method="upload1">
+
+			<!-- 限制文件上传的扩展名/类型 -->
+			<interceptor-ref name="defaultStack">
+				<!-- 限制扩展名 -->
+				<param name="fileUpload.allowedExtensions">jpg,png,bmp</param>
+				<!-- 限制上传文件的MIME类型，格式：大类/小类 -->
+				<param name="fileUpload.allowedTypes">image/jpg,image/pjpeg,image/png</param>
+			</interceptor-ref>
+
+			<result name="input">/upload1.jsp</result>
+		</action>
+
+		<action name="upload2" class="com.itheima.web.action.uploadAction2"
+			method="upload2">
+			<result name="input">/upload2.jsp</result>
+		</action>
+
+
+		<action name="download" class="com.itheima.web.action.downloadAction"
+			method="download">
+			<result name="success" type="stream">
+				<!-- 给stream的结果类型注入参数：Content-Type -->
+				<param name="contentType">application/octet-stream</param>
+				<!-- 告知客户浏览器以下载的方式打开 <param name="contentDisposition">attachment;filename=photo.jpg</param> -->
+				<!-- 使用OGNL表达式，来动态获取文件名 ${@java.net.URLEncoder@encode(filename,"UTF-8")} 
+					把${}中间的内容当成一个OGNL表达式来看待 -->
+				<param name="contentDisposition">attachment;filename=${@java.net.URLEncoder@encode(filename,"UTF-8")}</param>
+				<!-- 注入字节输入流 :取值要写动作类中set方法的名称，首字母改成小写 -->
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+
+	</package>
+
+</struts>

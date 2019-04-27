@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<profiles>
+<profile id="jQuery" name="jQuery">use namespace jQuery;
+include 'D:\\1睿思\\语言学习\\java\\阶段06.jQuery\\day40-jQuery--day01\\day40-jQuery--day01\\js库\\jquery-1.8.3.js';
+</profile>
+</profiles>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;struts-2.3.dtd&apos; to &apos;dtd&apos;&#x0D;&#x0A;- Original project: &apos;day24_02_struts2HelloAction&apos;&#x0D;&#x0A;- Destination element: &apos;dtd&apos;&#x0D;&#x0A;- Original element: &apos;struts-2.3.dtd&apos;" description="Copy file" element1="WebRoot/WEB-INF/dtd/struts-2.3.dtd" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1530868653171" target="/day24_01_struts2Template/WebRoot/WEB-INF/dtd" units="0" version="1.0"/>
+</session>

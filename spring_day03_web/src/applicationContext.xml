@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       					   http://www.springframework.org/schema/beans/spring-beans.xsd
+       					   http://www.springframework.org/schema/aop 
+       					   http://www.springframework.org/schema/aop/spring-aop.xsd
+       					   http://www.springframework.org/schema/context 
+       					   http://www.springframework.org/schema/context/spring-context.xsd">
+       					   
+	<!-- 1 datasourse -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/spring_day03"></property>
+		<property name="user" value="root"></property>
+		<property name="password" value="123"></property>
+	</bean>
+	
+	<!-- 2 dao -->
+	<bean id="accountDao" class="com.itheima.dao.impl.AccountDaoImpl">
+		<!-- dao要引用DataSource中的东西 -->
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
+	<!-- 3 service -->
+	<bean id="accountService" class="com.itheima.service.impl.AccountServiceImpl">
+		<property name="accountDao" ref="accountDao"></property>
+	</bean>
+
+</beans>

@@ -1,0 +1,43 @@
+<classpath>
+  <container id="day25_03_struts2validate!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="D:/javacode/javaweb/day25_03_struts2validate/WebRoot/WEB-INF/lib/xwork-core-2.3.15.3.jar">
+      <source-attachment-path>D:/1睿思/语言学习/java/阶段03.struts/day24-struts/源码/struts-2.3.15.3-all.zip</source-attachment-path>
+    </entry>
+  </container>
+  <container id="day25_02_struts2convert!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="D:/javacode/javaweb/day25_02_struts2convert/WebRoot/WEB-INF/lib/struts2-core-2.3.15.3.jar">
+      <source-attachment-path>D:/1睿思/语言学习/java/阶段03.struts/day24-struts/源码/struts-2.3.15.3-all.zip</source-attachment-path>
+    </entry>
+    <entry id="D:/javacode/javaweb/day25_02_struts2convert/WebRoot/WEB-INF/lib/xwork-core-2.3.15.3.jar">
+      <source-attachment-path>D:/1睿思/语言学习/java/阶段03.struts/day24-struts/源码/struts-2.3.15.3-all.zip</source-attachment-path>
+    </entry>
+  </container>
+  <container id="day26_01_struts2intercepor!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="D:/javacode/javaweb/day26_01_struts2intercepor/WebRoot/WEB-INF/lib/xwork-core-2.3.15.3.jar">
+      <source-attachment-path>D:/1睿思/语言学习/java/阶段03.struts/day24-struts/源码/struts-2.3.15.3-all.zip</source-attachment-path>
+    </entry>
+  </container>
+  <container id="springmvc_day01_01!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="D:/javacode/javaweb/springmvc_day01_01/WebRoot/WEB-INF/lib/spring-webmvc-4.2.4.RELEASE.jar">
+      <source-attachment-path>D:/1睿思/语言学习/java/spring-framework-4.2.4.RELEASE/libs/spring-webmvc-4.2.4.RELEASE-sources.jar</source-attachment-path>
+    </entry>
+  </container>
+  <container id="day24_04_struts2Captcha!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="D:/javacode/javaweb/day24_04_struts2Captcha/WebRoot/WEB-INF/lib/struts2-core-2.3.15.3.jar">
+      <source-attachment-path>D:/1睿思/语言学习/java/阶段03.struts/day24-struts/源码/struts-2.3.15.3-all.zip</source-attachment-path>
+    </entry>
+  </container>
+  <container id="day27_01_struts2actionContext!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="D:/javacode/javaweb/day27_01_struts2actionContext/WebRoot/WEB-INF/lib/struts2-core-2.3.15.3.jar">
+      <source-attachment-path>D:/1睿思/语言学习/java/阶段03.struts/day24-struts/源码/struts-2.3.15.3-all.zip</source-attachment-path>
+    </entry>
+    <entry id="D:/javacode/javaweb/day27_01_struts2actionContext/WebRoot/WEB-INF/lib/xwork-core-2.3.15.3.jar">
+      <source-attachment-path>D:/1睿思/语言学习/java/阶段03.struts/day24-struts/源码/struts-2.3.15.3-all.zip</source-attachment-path>
+    </entry>
+  </container>
+  <container id="day24_01_struts2Template!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="D:/javacode/javaweb/day24_01_struts2Template/WebRoot/WEB-INF/lib/struts2-core-2.3.15.3.jar">
+      <source-attachment-path>D:/1睿思/语言学习/java/阶段03.struts/day24-struts/源码/struts-2.3.15.3-all.zip</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

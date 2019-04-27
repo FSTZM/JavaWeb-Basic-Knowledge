@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+	<script type="text/javascript" src="../js/jquery-1.8.3.js"></script>
+	<script type="text/javascript">
+		
+		$(function(){
+		
+			var url = "/jQuery_day02/SendDataServlet";
+			var params = {"username":"杰克","password":"123"};
+			
+			/* 1 load()函数 ，必须使用jquery对象
+				 * * 格式：load(url, [data], [callback])
+				 * 		参数1：url ，请求路径
+				 * 		参数2：data，请求参数
+				 * 		参数3：callback，回调函数
+				 * * 如果没有请求参数，发送的GET请求
+				 * * 如果有请求参数，发送的POST请求。请求没有中文乱码
+				 * * 回调函数的参数
+				 * 		参数1：data，响应数据。load()永远获得字符串，如果需要使用，必须手动转换json对象。
+			*/
+			$(this).load(url,params,function(data){
+				var jsonData = eval("("+data+")");
+				alert(jsonData);
+			});
+
+		});
+	</script>
+	
+</head>
+<body>
+	
+	<input type="button" value="发送ajax" />
+	
+	
+</body>
+</html>

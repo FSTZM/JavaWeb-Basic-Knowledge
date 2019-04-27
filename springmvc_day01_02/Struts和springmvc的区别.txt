@@ -1,0 +1,10 @@
+实现机制：
+	Struts底层是过滤器
+	springmvc底层是servlet
+
+	Struts是多例
+	springmvc是单例
+	
+参数封装：
+	Struts参数封装是基于属性封装
+	springmvc是基于方法封装，颗粒更细

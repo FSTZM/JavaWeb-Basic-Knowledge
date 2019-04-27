@@ -1,0 +1,5 @@
+核心包：4+1
+aop：4(aop联盟、spring aop、aspectj规范、spring aspect)
+数据库：2(jdbc/tx)
+驱动：MySQL
+连接池：c3p0

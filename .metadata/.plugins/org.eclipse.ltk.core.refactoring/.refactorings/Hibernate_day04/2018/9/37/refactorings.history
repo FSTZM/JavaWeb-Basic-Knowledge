@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;utils.SelectSort.java&apos; to &apos;A.java&apos;&#x0D;&#x0A;- Original project: &apos;Hibernate_day04&apos;&#x0D;&#x0A;- Original element: &apos;utils.SelectSort.java&apos;&#x0D;&#x0A;- Renamed element: &apos;utils.A.java&apos;" description="Rename compilation unit &apos;SelectSort.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;utils{SelectSort.java" name="A.java" references="false" stamp="1536577772802" version="1.0"/>
+</session>

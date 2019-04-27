@@ -1,0 +1,3 @@
+applicationContext.xml、db.properties文件均放置在src目录下
+Tomcat部署项目，src目录下的配置文件默认位置为：{项目名}/WEB-INF/classes
+而Spring却在项目根目录下寻找，肯定找不到，因此，配置时指定“classpath”目录下寻找即可。

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper    
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itheima.mapper.OrderMapper">
+
+	<!-- property表示的是实体类中定义对象的名称 column表示的是sql语句查询中定义的名称，没有“as”，
+		就按照原来数据库的名称，如果使用了as重新定义了名字，就按照as后的名称来使用 
+	-->
+	
+	<!-- resultMap标签 的association标签和collection标签具有延迟加载的功能 -->
+
+	<select id="findOrdersAndUser" resultType="com.itheima.po.OrdersExt">
+		SELECT
+		orders.`id`,
+		orders.`user_id`,
+		orders.`number`,
+		user.`username`,
+		user.`sex`
+		FROM
+		USER,
+		orders
+		WHERE user.`id` = orders.`user_id`
+	</select>
+
+
+	<!-- ResultMap -->
+	<resultMap type="com.itheima.po.OrdersExt" id="OrdersAndUserRstMap">
+		<!--  OrderExt中没有订单Order信息，但是该类继承了Order，可以向上寻找 -->
+		<id column="id" property="id" />
+		<result column="user_id" property="userId" />
+		<result column="number" property="number" />
+
+		<!-- 用户信息 (一对一) -->
+		<association property="user" javaType="com.itheima.po.User">
+			<id column="user_id" property="id" />
+			<result column="username" property="username" />
+			<result column="sex" property="sex" />
+		</association>
+	</resultMap>
+
+	<select id="findOrdersAndUserRstMap" resultMap="OrdersAndUserRstMap">
+		SELECT
+		orders.`id`,
+		orders.`user_id`,
+		orders.`number`,
+		user.`username`,
+		user.`sex`
+		FROM
+		USER,
+		orders
+		WHERE user.`id` = orders.`user_id`
+	</select>
+
+	<!-- 一对多映射 ：extends 可以继承 -->
+	<resultMap type="com.itheima.po.OrdersExt" id="OrderAndDetail"
+		extends="OrdersAndUserRstMap">
+		<!-- 订单信息 -->
+		<!-- collection 映射一对多关系 ofType：查询的结果类型 -->
+		<collection property="orderdetail" ofType="com.itheima.po.Orderdetail">
+			<id column="detailId" property="id" />
+			<result column="items_id" property="itemsId" />
+			<result column="items_num" property="itemsNum" />
+		</collection>
+	</resultMap>
+
+	<select id="findOrderAndDetail" resultMap="OrderAndDetail">
+		SELECT
+		orders.`id`,
+		orders.`user_id`,
+		orders.`number`,
+		user.`username`,
+		user.`sex`,
+		orderdetail.`id` detailId,
+		orderdetail.`items_id`,
+		orderdetail.`items_num`
+		FROM
+		orders,
+		USER,
+		orderdetail
+		WHERE
+		orders.`user_id` = user.`id`
+		AND orders.`id` = orderdetail.`orders_id`
+
+	</select>
+
+	<!-- 多对多 -->
+	<resultMap type="com.itheima.po.User" id="UserAndItemsRstMap">
+		<!-- 用户信息 -->
+		<id column="user_id" property="id" />
+		<result column="username" property="username" />
+		<result column="sex" property="sex" />
+		<!-- 订单信息(一对多) -->
+		<collection property="orders" ofType="com.itheima.po.Orders">
+			<id column="id" property="id" />
+			<result column="user_id" property="userId" />
+			<result column="number" property="number" />
+			<!-- 订单明细(一对多) -->
+			<collection property="orderdetail" ofType="com.itheima.po.Orderdetail">
+				<id column="detailId" property="id" />
+				<result column="items_id" property="itemsId" />
+				<result column="items_num" property="itemsNum" />
+				<!-- 商品信息(一对一) -->
+				<association property="items" javaType="com.itheima.po.Items">
+					<id column="items_id" property="id"/>
+					<result column="name" property="name"/>
+					<result column="price" property="price"/>
+				</association>
+			</collection>
+		</collection>
+	</resultMap>
+
+	<select id="findUserAndItemsRstMap" resultMap="UserAndItemsRstMap">
+		SELECT
+		orders.`id`,
+		orders.`user_id`,
+		orders.`number`,
+		user.`username`,
+		user.`sex`,
+		orderdetail.`id` detailId,
+		orderdetail.`items_id`,
+		orderdetail.`items_num`,
+		items.`name`,
+		items.`price`
+		FROM
+		orders,
+		USER,
+		orderdetail,
+		items
+		WHERE orders.`user_id` = user.`id`
+		AND orders.`id` =
+		orderdetail.`orders_id`
+		AND orderdetail.`items_id` = items.`id`
+
+	</select>
+
+
+</mapper>

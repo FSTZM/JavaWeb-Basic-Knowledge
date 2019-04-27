@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.devMode" value="true"></constant>
+	<package name="p1" extends="struts-default">
+		<action name="login" class="com.itheima.web.action.loginAction" method="login">
+			<!-- 由于默认的拦截器栈中没有令牌的拦截器，所以需要把默认的拦截器栈配上 -->
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<!-- 使用struts2提供的一个令牌的拦截器：token -->
+			<interceptor-ref name="token"></interceptor-ref>
+			<!--<result>/success.jsp</result> 请求转发不行 -->
+			<result type="redirect">/success.jsp</result>
+			<result name="invalid.token">/message.jsp</result>
+		</action>
+	</package>
+</struts>

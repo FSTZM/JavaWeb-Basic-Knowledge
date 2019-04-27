@@ -1,0 +1,10 @@
+
+
+Caused by: java.lang.IllegalArgumentException
+
+原因分析：
+    可以看到主要的错误信息是Caused by: java.lang.IllegalArgumentException，最后这个单词的意思是“非法的数据异常”，
+主要原因是由于jdk版本和spring的相关jar包的版本有冲突，也就是，spring的版本过低和jdk8的版本会出现这个问题。
+
+解决方案：
+    我原来采用的是spring3.2.0的版本jdk8.0的版本，就出现了这个问题，然后我把spring的所有jar包都升级到了4.2.4的版本，然后测试正常。

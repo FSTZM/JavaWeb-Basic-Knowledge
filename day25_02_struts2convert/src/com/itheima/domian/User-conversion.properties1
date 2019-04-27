@@ -1,0 +1,7 @@
+#局部类型转换器的文件名的命名规范：javabean的名称-conversion.properties
+#局部类型转换器声明，声明方式是以使用的属性名称作为key，以类型转换器的全类名作为value
+birthday=com.itheima.web.convert.MyTypeConvert
+
+
+#局部类型的转换器声明文件放到domain中
+#全局声明建在src下，固定名称

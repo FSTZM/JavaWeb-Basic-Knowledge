@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.devMode" value="true"></constant>
+	<package name="p1" extends="struts-default">
+
+		<!-- 过滤器设计 -->
+		<interceptors>
+			<interceptor name="ckeckLoginInterceptor"
+				class="com.itheima.web.interceptor.checkLoginInterceptor"></interceptor>
+			<interceptor-stack name="myDefaultStack">
+				<!-- 配置默认的过滤器 -->
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+				<!-- 自定义的过滤器 -->
+				<interceptor-ref name="ckeckLoginInterceptor"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+
+		<!-- 使用过滤器 -->
+		<default-interceptor-ref name="myDefaultStack"></default-interceptor-ref>
+
+		<!-- input全局声明 -->
+		<global-results>
+			<result name="input">/login.jsp</result>
+		</global-results>
+
+		<action name="login" class="com.itheima.web.action.loginAction"
+			method="login">
+			<!-- 在引用自定义拦截器栈的时候，给指定的拦截器注入参数。方式就是：拦截器名称.属性名称 -->
+			<interceptor-ref name="myDefaultStack">
+				<param name="checkLoginInterceptor.excludeMethods">login</param>
+			</interceptor-ref>
+			<result type="redirectAction">showMain</result>
+		</action>
+		<action name="showMain" class="com.itheima.web.action.mainAction"
+			method="showMain">
+			<result>/main.jsp</result>
+		</action>
+		<action name="otherPage" class="com.itheima.web.action.otherPageAction"
+			method="otherPage">
+			<result>/otherpage.jsp</result>
+		</action>
+	</package>
+
+	
+</struts>

@@ -1,0 +1,8 @@
+1.重复代码太多
+	开发mapper接口:
+		1、	mapper接口的全限定名要和mapper映射文件的namespace值一致。
+		2、	mapper接口的方法名称要和mapper映射文件的statement的id一致。
+		3、	mapper接口的方法参数类型要和mapper映射文件的statement的parameterType的值一致，而且它的参数是一个。
+		4、	mapper接口的方法返回值类型要和mapper映射文件的statement的resultType的值一致。
+		
+2.硬编码太多
