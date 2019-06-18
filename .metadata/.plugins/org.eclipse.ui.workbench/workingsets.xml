@@ -65,7 +65,7 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day25_02_struts2convert" type="4"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1550907089329_6" label="dataStructure" name="dataStructure">
-<item elementID="=DataStructure" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=test" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1522222981802_0" label="Window Working Set" name="Aggregate for window 1522222981802"/>
 </workingSetManager>

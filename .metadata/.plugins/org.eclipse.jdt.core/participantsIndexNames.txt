@@ -59,6 +59,8 @@ D:\javacode\javaweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\306033
 \label\src
 D:\javacode\javaweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\287436608.index
 \day25_03_struts2validate\src
+H:\javacode\javaweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1500002555.index
+\day01_webcode\src
 D:\javacode\javaweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3873336660.index
 \lable\src
 D:\javacode\javaweb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3540672613.index
